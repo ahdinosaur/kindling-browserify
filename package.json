@@ -7,7 +7,7 @@
     "develop": "(export NODE_ENV=development; beefy index.js:bundle.js 5000 -- -t lessify)",
     "test": "(export NODE_ENV=test; testling)",
     "start": "(export NODE_ENV=production; browserify index.js -o bundle.js -t lessify -g uglifyify)",
-    "deploy": "(export NODE_ENV=production; npm start && deploy)"
+    "deploy": "(export NODE_ENV=production; npm start && ./bin/deploy)"
   },
   "repository": {
     "type": "git",
