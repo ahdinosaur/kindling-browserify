@@ -1,0 +1,38 @@
+{
+  "name": "project",
+  "version": "0.1.0",
+  "description": "TODO",
+  "main": "index.js",
+  "scripts": {
+    "develop": "(export NODE_ENV=development; beefy index.js:bundle.js 5000 -- -t lessify)",
+    "test": "(export NODE_ENV=test; testling)",
+    "start": "(export NODE_ENV=production; browserify index.js -o bundle.js -t lessify -g uglifyify)",
+    "deploy": "(export NODE_ENV=production; npm start && deploy)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ahdinosaur/init.beefy.git"
+  },
+  "keywords": [
+    "init",
+    "seed",
+    "start",
+    "starter",
+    "scaffold",
+    "scaffolding"
+  ],
+  "author": "ahdinosaur",
+  "license": "AGPLv3",
+  "bugs": {
+    "url": "https://github.com/ahdinosaur/init.beefy/issues"
+  },
+  "homepage": "https://github.com/ahdinosaur/init.beefy",
+  "dependencies": {
+    "browserify": "^3.41.0",
+    "lessify": "git://github.com/ahdinosaur/lessify",
+    "uglifyify": "^2.1.1"
+  },
+  "devDependencies": {
+    "beefy": "^1.1.0"
+  }
+}
