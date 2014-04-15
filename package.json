@@ -1,21 +1,21 @@
 {
   "name": "kindling-browserify",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "a kindling generator for browserify",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git://github.com/ahdinosaur/kindling-browserify.git"
   },
   "keywords": [
     "kindling",
-    "generator",
+    "template",
+    "scaffold",
+    "scaffolding",
+    "bootstrap",
     "starter",
-    "seed",
-    "scaffolding"
+    "generate",
+    "generator"
   ],
   "author": "ahdinosaur",
   "license": "ISC",
