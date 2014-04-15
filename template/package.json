@@ -1,0 +1,31 @@
+{
+  "name": "__project__",
+  "version": "0.1.0",
+  "description": "__description__",
+  "main": "index.js",
+  "scripts": {
+    "develop": "(export NODE_ENV=development; beefy index.js:bundle.js 5000 -- -t cssify)",
+    "test": "(export NODE_ENV=test; testling)",
+    "start": "(export NODE_ENV=production; browserify index.js -o bundle.js -t cssify -g uglifyify)",
+    "deploy": "(export NODE_ENV=production; npm start && ./bin/deploy)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/__user__/__project__.git"
+  },
+  "keywords": [],
+  "author": "__user__",
+  "license": "__license__",
+  "bugs": {
+    "url": "https://github.com/__user__/__project__/issues"
+  },
+  "homepage": "https://github.com/__user__/__project__",
+  "dependencies": {
+    "browserify": "^3.41.0",
+    "cssify": "^0.5.0",
+    "uglifyify": "^2.1.1"
+  },
+  "devDependencies": {
+    "beefy": "^1.1.0"
+  }
+}
