@@ -1,15 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env node
 
-# check-in to build branch
-git branch -D gh-pages
-git checkout -b gh-pages
+var path = require('path');
+var ghpages = require('ghpages');
 
-# build
-touch .nojekyll && \
-  git add . -f && \
-  git reset -- node_modules && \
-  git commit -m \"deploy\" && \
-  git push origin gh-pages --force
-
-# check-out of build branch
-git checkout master
+ghpages.publish(
+  path.join(__dirname, "/../"),
+  function (err) {
+    if (err) throw err;
+    console.log("published!");
+  }
+);
